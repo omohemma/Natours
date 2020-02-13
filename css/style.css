@@ -76,7 +76,7 @@ body {
   letter-spacing: 35px;
   /* Apply Custom Animation */
   animation-name: moveInLeft;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-timing-function: ease-out;
   /* animation-delay: 3s;
   animation-iteration-count: 3; */
@@ -87,7 +87,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17px;
-  animation: moveInRight 3s ease-out;
+  animation: moveInRight 1s ease-out;
 }
 
 /* Creating Animations */
