@@ -18,7 +18,7 @@ body {
   font-weight: 400;
   /* font-size: 16rem; */
   line-height: 1.7;
-  color: #777777;
+  color: #777;
   padding: 3rem;
   box-sizing: border-box; }
 
@@ -53,7 +53,7 @@ body {
 
 /* Primary heading */
 .heading-primary {
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 4.5rem; }
@@ -132,8 +132,8 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn--white {
-  background-color: #ffffff;
-  color: #777777; }
+  background-color: #fff;
+  color: #777; }
 
 /* Pseudo Element 
 Read about animation, transition and transform
@@ -151,7 +151,7 @@ Read about animation, transition and transform
   transition: all 0.4s; }
 
 .btn--white::after {
-  background-color: #ffffff; }
+  background-color: #fff; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
