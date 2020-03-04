@@ -1,6 +1,6 @@
 .row {
   max-width: $grid-width;
-  background-color: #eeeeee;
+  // background-color: #eeeeee;
   margin: 0 auto;
 
   //.row:not()
@@ -13,7 +13,7 @@
 
   // Style Attribute
   [class^="col-"] {
-    background-color: orangered;
+    // background-color: orangered;
     float: left;
 
     &:not(:last-child) {
