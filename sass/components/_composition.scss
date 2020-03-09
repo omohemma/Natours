@@ -1,0 +1,45 @@
+.composition {
+  //set parent position as relative
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    // box-shadow: x-axis y-axis blur blur-color;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    //Enhance  Transform Property with Transition Effect
+    transition: all 0.2s;
+    z-index: 10;
+    //works like padding
+    outline-offset: 1rem;
+
+    //Image position using absolute positioning
+    &--p1 {
+      left: 0;
+      top: -2rem;
+    }
+    &--p2 {
+      right: 0;
+      top: 2rem;
+    }
+    &--p3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      //Zoom and make go up a little bit
+      transform: scale(1.05) translateY(-0.5rem);
+      //works like border
+      outline: 1rem solid $color-primary-dark;
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+      //make hovered image on top
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
