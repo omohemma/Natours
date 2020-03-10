@@ -7,7 +7,7 @@
   // Card Side
   &__side {
     height: 50rem;
-    transition: all 0.8s;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -16,6 +16,7 @@
     // Hide The back side of the card
     backface-visibility: hidden;
     border-radius: 3px;
+    overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
@@ -27,14 +28,14 @@
 
       //variant Colors of cards
 
-      &-1 {
+      &--1 {
         background-image: linear-gradient(
           to right,
           $color-secondary-light,
           $color-secondary-dark
         );
       }
-      &-2 {
+      &--2 {
         background-image: linear-gradient(
           to right,
           $color-primary-light,
@@ -42,7 +43,7 @@
         );
       }
 
-      &-3 {
+      &--3 {
         background-image: linear-gradient(
           to right,
           $color-tertiary-light,
@@ -54,10 +55,120 @@
 
   &:hover &__side--front {
     // Rotate Card
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   &:hover &__side--back {
     // Rotate Card back to initial position
     transform: rotateY(0);
+  }
+
+  &__picture {
+    height: 23rem;
+    background-size: cover;
+    // Background Blending Image Backgrounds
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+          to right,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+          to right,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+          to right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url(../img/nat-5.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      &--1 {
+        background-image: linear-gradient(
+          to right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+      &--2 {
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url(../img/nat-5.jpg);
+      }
+
+      &--3 {
+        background-image: linear-gradient(
+            to right,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url(../img/nat-5.jpg);
+      }
+    }
+  }
+
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1.5px solid $color-grey-light-2;
+        }
+      }
+    }
+
+    //My Attempt
+    // font-size: 1.35rem; Should be in list item
+    // font-weight: 700; Not needed
+
+    // ul {
+    //   list-style: none;
+    //   padding: 0 6rem; Use width instead of Padding
+    //   li {
+    //     padding: 1.5rem;
+    //   }
+    //   li:not(:last-child) {
+    //     border-bottom: 1.5px solid rgba($color-black, 0.15); idea is o point
+    //   }
+    // }
   }
 }
