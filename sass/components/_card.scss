@@ -106,12 +106,15 @@
     position: absolute;
     top: 12rem;
     right: 2rem;
+    // Break Text
     width: 75%;
 
     &-span {
       padding: 1rem 1.5rem;
+      //Make Span Words looks Like Seperate Entities
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+
       &--1 {
         background-image: linear-gradient(
           to right,
